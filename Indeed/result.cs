@@ -15,7 +15,7 @@ namespace Indeed
         public string Query { set; get; }
 
         [DataMember(Name = "location")]
-        public string Location { set; get; }
+        public string Location { set; get; } 
 
 
         [DataMember(Name = "paginationPayload")]

@@ -10,13 +10,13 @@ namespace Indeed
     {
 
         [EnumMember(Value = "ar")]
-        Argentina,
+        ar,
         [EnumMember(Value = "au")]
-        Australia,
+        au,
         [EnumMember(Value = "at")]
-        Austria,
+        at,
         [EnumMember(Value = "bh")]
-        Bahrain,
+        bh,
         [EnumMember(Value = "gb")]
         gb
 
