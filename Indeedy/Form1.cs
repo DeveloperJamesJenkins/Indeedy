@@ -16,7 +16,7 @@ namespace Indeedy
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent(); 
 
             Query query = new Query();
             query.Publisher = "ENTERPUBLISHERID";
@@ -32,6 +32,7 @@ namespace Indeedy
             query.Start = 0;
             query.Limit = 30;
             query.IncludeLatLong = true;
+
 
 
 

@@ -17,6 +17,7 @@ namespace Indeed
         [DataMember(Name = "location")]
         public string Location { set; get; }
 
+
         [DataMember(Name = "paginationPayload")]
         public string PaginationPayload { set; get; }
 
