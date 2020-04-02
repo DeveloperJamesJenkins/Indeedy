@@ -32,7 +32,7 @@ namespace Indeedy
             query.Start = 0;
             query.Limit = 30;
             query.IncludeLatLong = true;
-
+            query.HideDuplicates = true;
 
 
 
