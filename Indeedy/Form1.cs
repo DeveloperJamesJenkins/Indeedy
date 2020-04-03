@@ -19,7 +19,7 @@ namespace Indeedy
             InitializeComponent(); 
 
             Query query = new Query();
-            query.Publisher = "YOUR PUBLISHER ID";
+            query.Publisher = "Enter PUBLISHER ID";
             query.Version = 2;
             query.UserIP = IPAddress.Parse("127.0.0.1");
             query.UserAgent = "Mozilla/%2F4.0%28Firefox%29";
