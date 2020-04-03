@@ -30,6 +30,8 @@ namespace Indeed
 
         public SiteType SiteType { get; set; }
 
+        public SortType SortType { get; set; }
+
         public JobType JobType { get; set; }
 
         public int Start { get; set; }

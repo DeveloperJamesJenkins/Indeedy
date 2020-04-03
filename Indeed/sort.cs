@@ -4,8 +4,9 @@ using System.Text;
 
 namespace Indeed
 {
-    enum Sort
+    public enum SortType
     {
+       
         Date,
         Relevance
     }

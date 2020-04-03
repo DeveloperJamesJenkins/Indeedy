@@ -6,7 +6,7 @@ namespace Indeed
 {
     public enum Format
     {
-        XML,
-        JSON
+        // XML,
+        JSON 
     }
 }

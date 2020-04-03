@@ -19,21 +19,24 @@ namespace Indeedy
             InitializeComponent(); 
 
             Query query = new Query();
-            query.Publisher = "ENTERPUBLISHERID";
+            query.Publisher = "YOUR PUBLISHER ID";
             query.Version = 2;
             query.UserIP = IPAddress.Parse("127.0.0.1");
             query.UserAgent = "Mozilla/%2F4.0%28Firefox%29";
             query.SearchPhrase = "c%23";
             query.Radius = 100;
-            query.Location = "Plymouth";
-            query.Country = Countries.gb;
-            query.Format = Format.JSON;
+            query.Location = "Saltash";
+            query.Country = Countries.GB;
+            query.Format = Format.JSON; // XML NOT IMPLEMENTED
             query.FromAge = 30;
             query.Start = 0;
             query.Limit = 30;
             query.IncludeLatLong = true;
             query.HideDuplicates = true;
-
+            query.SiteType = SiteType.JobSite;
+            query.IncludeLatLong = true;
+            query.SortType = SortType.Date;
+            query.JobType = JobType.FullTime;
 
 
             Search search = new Search();

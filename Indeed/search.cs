@@ -20,8 +20,8 @@ namespace Indeed
             {
                 string name = prop.Name.ToLower();
                 var value = prop.GetValue(Query, null);
-
-                switch(name)
+                
+                switch (name)
                 {
                     case "version":
                         name = "v";
@@ -39,10 +39,27 @@ namespace Indeed
                         name = "jt";
                         break;
 
+
+                    case "sitetype":
+                        name = "st";
+                        break;
+
+                    case "sorttype":
+                        name = "sort";
+                        value = value.ToString().ToLower();
+                        break;
+
                     case "channel":
                         name = "chnl";
                         break;
 
+                    case "includelatlong":
+                        name = "latlong";
+                        break;
+
+                    case "hideduplicates":
+                        name = "filter";
+                        break;
 
                     case "searchphrase":
                         continue;
@@ -56,7 +73,7 @@ namespace Indeed
 
             string link = sb.ToString();
 
-             HttpWebRequest searchRequest = (HttpWebRequest)WebRequest.Create(link);
+            HttpWebRequest searchRequest = (HttpWebRequest)WebRequest.Create(link);
             searchRequest.Method = "Get";
 
             using WebResponse searchResponse = searchRequest.GetResponse();
