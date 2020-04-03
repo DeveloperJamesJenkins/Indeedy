@@ -1,13 +1,20 @@
-﻿using System;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.Text;
 
 namespace Indeed
 {
+    
     [DataContract]
     public class Result 
     {
+
+        [BsonId]
+        public DateTime date { get { return DateTime.UtcNow; } }
+
         [DataMember(Name = "version")]
         public string Version{ set; get; }
 

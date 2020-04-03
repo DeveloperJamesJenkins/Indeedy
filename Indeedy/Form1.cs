@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Indeed;
+using MongoDB;
 
 namespace Indeedy
 {
@@ -19,11 +20,11 @@ namespace Indeedy
             InitializeComponent(); 
 
             Query query = new Query();
-            query.Publisher = "Enter PUBLISHER ID";
+            query.Publisher = "PUBLISHER ID";
             query.Version = 2;
             query.UserIP = IPAddress.Parse("127.0.0.1");
             query.UserAgent = "Mozilla/%2F4.0%28Firefox%29";
-            query.SearchPhrase = "c%23";
+            query.SearchPhrase = "php";
             query.Radius = 100;
             query.Location = "Saltash";
             query.Country = Countries.GB;
@@ -41,6 +42,13 @@ namespace Indeedy
 
             Search search = new Search();
             Result result = search.Load(query);
+
+            Mongo mongo = new Mongo();
+            mongo.Connect();
+            mongo.PostJob(result);
+
+            var results = mongo.FindJobs("php");
+            
         
         
         }
